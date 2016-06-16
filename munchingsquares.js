@@ -25,8 +25,7 @@ function updateCanvas() {
             dy = Math.sqrt(Math.abs(s - xc)) * 80
             xx = interp(xc, dx, ratio)
             yy = interp(yc, dy, ratio)
-            a = (xx ^ yy) % t
-            brightness = a //Math.sqrt(Math.abs(a*a - yc*yc))
+            brightness = (xx ^ yy) % t
             canvas.setPixel(x, y, brightnessToColor(brightness * tr))
         }
     }
